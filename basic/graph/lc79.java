@@ -25,10 +25,12 @@ public class lc79 {
         if (i < 0 || i >= board.length || j < 0 || j >= board[0].length
             || visited[i][j]) return false;
         if (board[i][j] == wordCh[k]) {
+            //in
             visited[i][j] = true;
             flag = dfs(i+1,j,k+1) || dfs(i-1,j,k+1) ||
                     dfs(i, j+1, k+1) || dfs(i, j-1, k+1);
         }
+        //out
         visited[i][j] = false;
         return flag;
     }
