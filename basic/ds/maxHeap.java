@@ -46,8 +46,22 @@ public class maxHeap {
             if (bigger+1 <= size && nums[bigger+1] > nums[bigger]) {
                 bigger++;
             }
+            if (nums[cur] >= nums[bigger]) break;
             swap(cur, bigger);
             cur = bigger;
+        }
+
+        int bci = 2*cur;
+        while (bci <= size) {
+            if (bci + 1 <= size && nums[bci+1] > nums[bci]) {
+                bci++;
+            }
+            if (nums[bci] > nums[cur]) {
+                swap(bci, cur);
+                cur = bci;
+            } else {
+                break;
+            }
         }
     }
 
