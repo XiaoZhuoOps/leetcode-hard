@@ -14,13 +14,21 @@ public class maxHeap {
     }
 
     //api
-    public boolean insert(int num) {
+    public int insert(int num) {
         if (size < cap) {
-            return false;
+            return -1;
         }
         nums[size++] = num;
         up(size);
-        return true;
+        return num;
+    }
+
+    public int delete() {
+        if (size <= 0) return -1;
+        int top = nums[1];
+        nums[1] = nums[size];
+        down(1);
+        return top;
     }
 
     //上浮
