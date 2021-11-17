@@ -41,16 +41,6 @@ public class maxHeap {
 
     //下沉
     private void down(int cur) {
-        while (2*cur <= size) {
-            int bigger = 2*cur;
-            if (bigger+1 <= size && nums[bigger+1] > nums[bigger]) {
-                bigger++;
-            }
-            if (nums[cur] >= nums[bigger]) break;
-            swap(cur, bigger);
-            cur = bigger;
-        }
-
         int bci = 2*cur;
         while (bci <= size) {
             if (bci + 1 <= size && nums[bci+1] > nums[bci]) {

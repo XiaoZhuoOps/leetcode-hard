@@ -1,4 +1,4 @@
-package top100;
+package hot100;
 
 public class t75 {
     public void sortColors(int[] nums){
