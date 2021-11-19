@@ -5,6 +5,9 @@ package hashMap;
 伪代码
 */
 
+
+import basic.ds.TreeNode;
+
 public class O27 {
     public TreeNode mirrorTree(TreeNode root) {
         if(root == null) return null;

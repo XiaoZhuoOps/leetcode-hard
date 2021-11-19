@@ -1,6 +1,8 @@
 package offer;
 
-/* 
+import basic.ds.ListNode;
+
+/*
     思路 两次遍历
     伪代码
 */
@@ -12,7 +14,7 @@ public class O22 {
             num++;
             cur = cur.next;
         }
-        ListNode cur = head;
+        cur = head;
         num-=(k-1);
         for(int i = 0; i+1 < num; i++){
             cur = cur.next;

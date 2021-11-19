@@ -1,6 +1,8 @@
 package bit;
 
-import javax.swing.tree.TreeNode;
+
+import basic.ds.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 

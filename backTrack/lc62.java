@@ -1,13 +1,13 @@
 package backTrack;
 
-import bfs.ListNode;
+
 
 public class lc62 {
 
 }
 
 
-class Solution {
+class Solution1 {
     public int smallestEqual(int[] nums) {
         int j = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -36,7 +36,7 @@ class ListNode {
     ListNode next;
 }
 
-class Solution {
+class Solution2 {
     public int[] nodesBetweenCriticalPoints(ListNode head) {
         int lastIndex = -1, curIndex = 1, mind = Integer.MAX_VALUE, sum = 0;
         ListNode pre = head, next = head.next;
@@ -64,7 +64,7 @@ class Solution {
     }
 }
 
-class Solution {
+class Solution3 {
     int[] nums;
     int[] operations = new int[]{1, 2, 3};
     int start, goal;

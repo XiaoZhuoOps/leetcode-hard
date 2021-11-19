@@ -25,11 +25,11 @@ class Robot {
         }
     }
 
-    public int[] getPos() {
-
-    }
-
-    public String getDir() {
-
-    }
+//    public int[] getPos() {
+//
+//    }
+//
+//    public String getDir() {
+//
+//    }
 }
