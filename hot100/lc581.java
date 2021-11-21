@@ -30,7 +30,4 @@ public class lc581 {
         }
         return right - left + 1;
     }
-    public int findUnsortedSubarray2(int[] nums) {
-
-    }
 }
