@@ -38,7 +38,7 @@ public class O12 {
     public boolean exist(char[][] board, String word) {
         if(word == null || word.length() == 0) return false;
         marked = new boolean[board.length][board[0].length];
-        List<List<Integer>> path = new ArrayList<>(word.length());
+        basic.ds.List<basic.ds.List<Integer>> path = new ArrayList<>(word.length());
         for(int i = 0; i < board.length; i++){
             for (int j = 0; j < board[0].length; j++) {
                 if(board[i][j] == word.charAt(0)) {
@@ -53,7 +53,7 @@ public class O12 {
         return flag;
     }
 
-    void trackBack(char[][] board, String word, List<List<Integer>> path){
+    void trackBack(char[][] board, String word, basic.ds.List<basic.ds.List<Integer>> path){
         if(path.size() == word.length() || flag) {
             flag = true;
             return;
@@ -67,7 +67,7 @@ public class O12 {
             mark[choice] = false;
         }
     }
-    void add(int i, int j, List<List<Integer>> path){
+    void add(int i, int j, basic.ds.List<basic.ds.List<Integer>> path){
         ArrayList<Integer> list = new ArrayList<>();
         list.add(i);
         list.add(j);
