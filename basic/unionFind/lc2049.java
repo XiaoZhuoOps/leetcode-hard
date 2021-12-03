@@ -61,13 +61,41 @@ class Solution{
             }
             if (par.left == null) par.left = cur;
             else par.right = cur;
-            map.put(i, cur);
+            if (!map.containsKey(i)) {
+                map.put(i, cur);
+            }
         }
-
         sizes = new int[parents.length];
 //        calcSize(root);
 //
 //        dfs(root);
         return num;
+    }
+
+    int calcSize(TreeNode root) {
+        if (root == null) return 0;
+        int num = calcSize(root.left) + calcSize(root.right) + 1;
+        sizes[root.val] = num;
+        return num;
+    }
+
+    void dfs(TreeNode root) {
+        if (root == null) return;
+        int num1 = (sizes[0] == sizes[root.val]) ? 1 : (sizes[0] - sizes[root.val]);
+        int num2 = (root.left == null) ? (1) : (sizes[root.left.val]);
+        int num3 = (root.right == null) ? (1) : (sizes[root.right.val]);
+        int product = num1 * num2 * num3;
+        if (product > max) {
+            max = product;
+            num = 1;
+        } else if (product == max) {
+            num++;
+        }
+        dfs(root.left);
+        dfs(root.right);
+    }
+
+    public static void main(String[] args) {
+        new Solution().countHighestScoreNodes(new int[]{-1,2,0,2,0});
     }
 }
