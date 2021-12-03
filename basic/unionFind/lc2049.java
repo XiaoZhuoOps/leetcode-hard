@@ -65,9 +65,9 @@ class Solution{
         }
 
         sizes = new int[parents.length];
-        calcSize(root);
-
-        dfs(root);
+//        calcSize(root);
+//
+//        dfs(root);
         return num;
     }
 }
