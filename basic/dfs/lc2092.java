@@ -31,20 +31,22 @@ public class lc2092 {
 
         List<Integer> ans = new ArrayList<>();
         for (int j = 0; j < knows.length; j++) {
-            if(knows[j]) ans.add(j);
+            if (knows[j]) ans.add(j);
         }
         return ans;
     }
 
     void dfs(Map<Integer, List<Integer>> map, boolean[] knows) {
         for (Map.Entry<Integer, List<Integer>> entry : map.entrySet()) {
+            if (!knows[entry.getKey()]) continue;
             dfs0(map, knows, entry.getKey());
         }
     }
 
     void dfs0(Map<Integer, List<Integer>> map, boolean[] knows, int key) {
-        if ()
-        for (Integer neighbor : map.get(key))  {
+        for (Integer neighbor : map.get(key)) {
+            if (knows[neighbor]) continue;
+            knows[neighbor] = true;
             dfs0(map, knows, neighbor);
         }
     }

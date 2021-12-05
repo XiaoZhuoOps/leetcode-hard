@@ -1,4 +1,4 @@
-package basic.ds.Graph;
+package basic.DS.Graph;
 
 import java.util.ArrayList;
 import java.util.List;

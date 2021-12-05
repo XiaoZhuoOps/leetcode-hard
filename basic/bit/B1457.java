@@ -1,10 +1,7 @@
 package basic.bit;
 
 
-import basic.ds.TreeNode;
-
-import java.util.ArrayList;
-import java.util.List;
+import basic.DS.TreeNode;
 
 /*
     1思路 dfs回溯+异或判断

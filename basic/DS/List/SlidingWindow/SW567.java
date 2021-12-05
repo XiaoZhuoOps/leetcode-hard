@@ -1,4 +1,4 @@
-package basic.ds.List.SlidingWindow;
+package basic.DS.List.SlidingWindow;
 
 import java.util.HashMap;
 

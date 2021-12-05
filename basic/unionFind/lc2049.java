@@ -1,8 +1,7 @@
 package basic.unionFind;
 
-import basic.ds.TreeNode;
+import basic.DS.TreeNode;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -6,7 +6,7 @@ package basic.hashMap;
 */
 
 
-import basic.ds.TreeNode;
+import basic.DS.TreeNode;
 
 public class O27 {
     public TreeNode mirrorTree(TreeNode root) {

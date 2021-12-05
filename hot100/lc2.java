@@ -1,6 +1,6 @@
 package hot100;
 
-import basic.ds.ListNode;
+import basic.DS.ListNode;
 
 public class lc2 {
 }

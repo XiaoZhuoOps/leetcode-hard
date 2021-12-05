@@ -1,4 +1,4 @@
-package basic.ds;
+package basic.DS;
 
 public class ListNode {
     public int val;

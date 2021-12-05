@@ -1,4 +1,4 @@
-package basic.ds.List.SlidingWindow;
+package basic.DS.List.SlidingWindow;
 
 public class SW1423{
     //error1 16

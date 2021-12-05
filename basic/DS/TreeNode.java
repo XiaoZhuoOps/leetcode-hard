@@ -1,4 +1,4 @@
-package basic.ds;
+package basic.DS;
 
 public class TreeNode {
     public int val;
