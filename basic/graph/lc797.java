@@ -1,4 +1,4 @@
-package basic.DS.Graph;
+package basic.graph;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.List;
  * error ans =[[],[]] stack == null add()方法传递的参数是一个地址，直接传stack想等于传地址，因为最后stack是null，所以最后的ans立面也是[][]
  * 因为给stack创建一个副本，把副本的地质穿进去 这样stack改变也不会改变副本的内容
  */
-public class Graph797 {
+public class lc797 {
 
     private List<List<Integer>> ans = new ArrayList<>();
     private List<Integer> stack = new ArrayList<>();

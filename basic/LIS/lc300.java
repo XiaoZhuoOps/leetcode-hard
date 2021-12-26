@@ -6,6 +6,7 @@ import java.util.List;
 public class lc300 {
 }
 class Solution {
+    //二分法
     public int lengthOfLIS(int[] nums) {
         List<Integer> list = new ArrayList<>(); //长度为i+1的子序列末尾的最小元素
         list.add(nums[0]);

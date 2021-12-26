@@ -4,15 +4,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-class Node {
-    int path;
-    int index;
-
-    public Node(int p, int i) {
-        this.path = p;
-        this.index = i;
-    }
-}
 
 //基于最小路径树的实现
 public class Dijstra {
