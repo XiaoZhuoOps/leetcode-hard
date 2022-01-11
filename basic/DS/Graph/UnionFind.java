@@ -4,7 +4,7 @@ package basic.DS.Graph;
  * 并查集实现
  */
 public class UnionFind {
-    int count; //连通分量个数
+    public int count; //连通分量个数
     int[] parents;
     int[] size; //每个节点作为根节点的树的大小
     public UnionFind(int n) {
@@ -17,7 +17,7 @@ public class UnionFind {
             size[i] = 1;
         }
     }
-    void union(int p, int q) {
+    public void union(int p, int q) {
         if (connected(p,q)) return;
         int pp = root(p);
         int qq = root(q);
@@ -30,7 +30,7 @@ public class UnionFind {
         }
         count--;
     }
-    boolean connected(int p, int q) {
+    public boolean connected(int p, int q) {
         return root(p) == root(q);
     }
     int root(int p) {
