@@ -1,4 +1,5 @@
-package basic.mst;
+package basic.graph.mst;
+
 
 import java.util.Arrays;
 import java.util.Comparator;

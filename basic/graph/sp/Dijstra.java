@@ -1,4 +1,6 @@
-package basic.DS.Graph;
+package basic.graph.sp;
+
+import basic.DS.Graph.Node;
 
 import java.util.Comparator;
 import java.util.List;
@@ -31,6 +33,7 @@ public class Dijstra {
         return sp;
     }
     Node[] adj(Node index) {
+        //计算节点路径
     }
 }
 
