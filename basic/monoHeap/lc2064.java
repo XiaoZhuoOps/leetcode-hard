@@ -1,4 +1,4 @@
-package basic.maxHeap;
+package basic.monoHeap;
 
 public class lc2064 {
 

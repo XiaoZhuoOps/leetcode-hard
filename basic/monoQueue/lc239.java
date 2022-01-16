@@ -1,4 +1,4 @@
-package basic.maxQueue;
+package basic.monoQueue;
 
 import java.util.LinkedList;
 

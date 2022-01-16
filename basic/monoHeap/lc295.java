@@ -1,4 +1,4 @@
-package basic.maxHeap;
+package basic.monoHeap;
 
 import java.util.PriorityQueue;
 
