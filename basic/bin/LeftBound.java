@@ -31,10 +31,12 @@ public class LeftBound {
         int left = 0, right = nums.length - 1, mid = 0;
         while (left < right) {
             mid = (left + right) >> 1;
-            if (nums[mid] >= target) {
+            if (nums[mid] > target) {
                 right = mid; //right = mid - 1 可能会造成right < left 而越界
             } else if (nums[mid] < target) {
                 left = mid + 1; //left = mid 可能会造成死循环
+            } else {
+                right = mid; //找左边界
             }
         }
         return (nums[right] == target) ? right : -1;
@@ -46,10 +48,12 @@ public class LeftBound {
         int left = 0, right = nums.length - 1, mid = 0;
         mid = (left + right + 1) >> 1;
         while (left < right) {
-            if (nums[mid] <= target) {
+            if (nums[mid] < target) {
                 left = mid;
             } else if (nums[mid] > target) {
                 right = mid - 1;
+            } else {
+                left = mid; //找右边界
             }
         }
         return (nums[right] == target) ? right : -1;
