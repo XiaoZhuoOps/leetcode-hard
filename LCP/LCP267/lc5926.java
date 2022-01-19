@@ -1,4 +1,4 @@
-package LCP.lcp267;
+package LCP.LCP267;
 
 public class lc5926 {
     public int timeRequiredToBuy(int[] tickets, int k) {
