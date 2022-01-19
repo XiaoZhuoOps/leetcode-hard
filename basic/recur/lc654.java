@@ -3,8 +3,6 @@ package basic.recur;
 import basic.DS.TreeNode;
 
 public class lc654 {
-}
-class Solution {
     int[] nums;
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         this.nums = nums;

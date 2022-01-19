@@ -39,6 +39,7 @@ public class LeftBound {
                 right = mid; //找左边界
             }
         }
+        //退出时必有left==right
         return (nums[right] == target) ? right : -1;
     }
 
@@ -49,13 +50,14 @@ public class LeftBound {
         mid = (left + right + 1) >> 1;
         while (left < right) {
             if (nums[mid] < target) {
-                left = mid;
+                left = mid; //left = mid + 1 可能会造成right < left 而越界
             } else if (nums[mid] > target) {
-                right = mid - 1;
+                right = mid - 1; //right = mid 可能会造成死循环
             } else {
                 left = mid; //找右边界
             }
         }
+        //退出时必有left==right
         return (nums[right] == target) ? right : -1;
     }
 }
