@@ -1,4 +1,4 @@
-package basic.dp.packagedp;
+package basic.dp.beibao;
 
 /**
  * 1、完全背包
