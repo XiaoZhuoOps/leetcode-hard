@@ -1,6 +1,6 @@
 package hot100;
 
-import basic.DS.ListNode;
+import algo.DS.ListNode;
 
 public class lcp148 {
     public ListNode sortList(ListNode head) {

@@ -1,6 +1,6 @@
 package offer;
 
-import basic.DS.ListNode;
+import algo.DS.ListNode;
 
 /*
     思路 两次遍历

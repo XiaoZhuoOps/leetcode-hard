@@ -1,9 +1,6 @@
 package LCP.LCP272;
 
-public class lc5958 {
-
-}
-class Solution {
+class lc5958 {
     public long getDescentPeriods(int[] prices) {
         int len = prices.length;
         long[] dp = new long[len];

@@ -1,6 +1,6 @@
 package LCP.LCP270;
 
-import basic.DS.ListNode;
+import algo.DS.ListNode;
 
 public class lc5943 {
     public ListNode deleteMiddle(ListNode head) {

@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class lc5959 {
-}
-
-class Solution {
+class lc5959 {
     public int kIncreasing(int[] arr, int k) {
         int len = arr.length, res = 0;
         boolean[] vis = new boolean[len];

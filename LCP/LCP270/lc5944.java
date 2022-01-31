@@ -1,6 +1,6 @@
 package LCP.LCP270;
 
-import basic.DS.TreeNode;
+import algo.DS.TreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;

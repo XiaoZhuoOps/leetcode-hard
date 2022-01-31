@@ -1,8 +1,6 @@
 package offer;
 
-import basic.DS.ListNode;
-
-import java.util.List;
+import algo.DS.ListNode;
 
 public class O24 {
     public ListNode reverseList(ListNode head) {

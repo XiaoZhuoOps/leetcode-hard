@@ -2,9 +2,7 @@ package LCP.LCP272;
 
 import java.util.LinkedList;
 
-public class lc5957 {
-}
-class Solution {
+class lc5957 {
     public String addSpaces(String s, int[] spaces) {
         StringBuffer sb = new StringBuffer();
         int i = 0, j = 0, len = s.length();
