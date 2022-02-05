@@ -1,6 +1,5 @@
 package lianfang;
 
-import algo.DS.ListNode;
 /**
  * 给一个有序数组（单调不减），和一个数x，找到数组中第一个大于等于>=x的数，返回它的下标
  */

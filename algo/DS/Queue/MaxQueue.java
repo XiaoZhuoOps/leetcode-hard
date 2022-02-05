@@ -1,4 +1,4 @@
-package DS.Queue;
+package algo.DS.Queue;
 
 import java.util.Deque;
 import java.util.Queue;

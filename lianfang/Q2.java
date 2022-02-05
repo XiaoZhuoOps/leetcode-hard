@@ -2,7 +2,6 @@ package lianfang;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
 
 public class Q2 {
     public static void main(String[] args) {

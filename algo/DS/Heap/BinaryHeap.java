@@ -1,4 +1,4 @@
-package DS.Heap;
+package algo.DS.Heap;
 
 public class BinaryHeap {
     int[] hp;

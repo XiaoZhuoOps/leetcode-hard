@@ -1,5 +1,6 @@
+package hot100;
 
-class Solution {
+class t34 {
     public int[] searchRange(int[] nums, int target) {
         return new int[]{left_bound(nums, target), right_bound(nums, target)};
     }

@@ -3,6 +3,9 @@ package algo.hashMap;
 import java.util.*;
 
 public class C1817 {
+    public static void main(String[] args) {
+        System.out.println("");
+    }
     public int[] findingUsersActiveMinutes(int[][] logs, int k) {
         //构建map{id:{1,2...}}
         Map<Integer, Set<Integer>> map = new HashMap<>();

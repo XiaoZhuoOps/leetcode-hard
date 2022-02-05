@@ -1,4 +1,4 @@
-package DS.BST;
+package algo.DS.BST;
 
 class TreeNode{
     Integer v;

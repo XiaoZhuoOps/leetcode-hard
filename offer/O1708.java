@@ -1,7 +1,6 @@
 package offer;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class O1708 {
     public int bestSeqAtIndex(int[] height, int[] weight) {
