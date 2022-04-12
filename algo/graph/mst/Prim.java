@@ -18,6 +18,7 @@ public class Prim {
         while (!pq.isEmpty()) {
             Edge minEdge = pq.poll();
             if (inMST[minEdge.to.index]) continue; //avoid circle
+            inMST[minEdge.to.index] = true;
             weightSum += minEdge.weight;
             for (Edge edge : graph.edges[minEdge.to.index]) {
                 if (inMST[edge.to.index]) continue;

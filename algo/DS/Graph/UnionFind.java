@@ -33,11 +33,20 @@ public class UnionFind {
     public boolean connected(int p, int q) {
         return root(p) == root(q);
     }
+    //普通版本
     int root(int p) {
         int par = p;
         while (parents[par] != par) {
             par = parents[par];
         }
         return par;
+    }
+    //路径压缩版本
+    //1、返回根节点
+    //2、压缩路径
+    int rootCompress(int p) {
+        if (parents[p] != p) return p;
+        parents[p] = rootCompress(parents[p]);
+        return parents[p];
     }
 }
