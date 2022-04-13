@@ -3,9 +3,9 @@ package algo.treeArray;
 public class lc307 {
 
 }
-class NumArray {
+class TreeArray {
     int[] arr; // 1->n
-    public NumArray(int[] nums) {
+    public TreeArray(int[] nums) {
         this.arr = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             this.arr[i] = nums[i];

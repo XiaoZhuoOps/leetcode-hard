@@ -1,5 +1,5 @@
-package algo.slideWindow;
-
+//package algo.slideWindow;
+//
 //public class SlideWindow {
 //    int l,r;
 //    HashMap<Character,num> window;

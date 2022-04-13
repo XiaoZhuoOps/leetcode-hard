@@ -30,6 +30,5 @@ public class lcp6019 {
 
     long lcm(long a, long b){  //最小公倍数
         return a * b / gcd(a, b);
-
     }
 }
