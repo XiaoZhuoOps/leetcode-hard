@@ -4,12 +4,12 @@
 """
 class Node:
     def __init__(self):
-        self.chs = {}
-        self.word = ""
+        self.chs = {} # 'a' -> Node()
+        self.word = "" #以当前字符结尾的单词
 
 class Trie:
     def __init__(self):
-        self.root = Node()
+        self.root = Node() #冗余节点
 
     def add(self, word):
         cur = self.root
@@ -22,13 +22,14 @@ class Trie:
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         m, n = len(board), len(board[0])
+        dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]]
         ans = []
         trie = Trie()
         for word in words:
             trie.add(word)
 
+        # 此处的node是进入节点前的父node
         def dfs(i, j, board, node):
-            nonlocal m, n
             if i < 0 or i >= m or j < 0 or j >= n:
                 return
             ch = board[i][j]
@@ -37,10 +38,9 @@ class Solution:
             if ch not in node.chs:
                 return
             node = node.chs[ch]
-            if node.word != "" and node.word not in ans:
+            if node.word != "":
                 ans.append(node.word)
             board[i][j] = "#"
-            dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]]
             for dir in dirs:
                 dfs(i + dir[0], j + dir[1], board, node)
             board[i][j] = ch
@@ -48,4 +48,4 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 dfs(i, j, board, trie.root)
-        return ans
+        return list(set(ans))

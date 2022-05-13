@@ -6,23 +6,29 @@
 """
 class Lc164:
     def candy(self, ratings: List[int]) -> int:
-        i, lr, ans = 1, len(ratings), 1
+        # 前后比较的问题一般i都从1开始
+        i, ans, ls, last = 1, 0, len(ratings), 0
         candys = [1 for i in range(lr)]
-        while i < lr:
-            if ratings[i-1] < ratings[i]:
+        while i < ls:
+            # 递增序列
+            if ratings[i] > ratings[i-1]:
                 candys[i] = candys[i-1]+1
-                ans += candys[i]
                 i += 1
-            elif ratings[i-1] == ratings[i]:
+            # 不增不减序列
+            elif ratings[i] == ratings[i-1]:
                 candys[i] = 1
-                ans += candys[i]
                 i += 1
             else:
-                m = 0
-                while i < lr and ratings[i-1] > ratings[i]:
+                # 递减序列
+                last = i-1
+                while i < ls and ratings[i] < ratings[i-1]:
                     i += 1
-                    m += 1
-                if candys[i-m-1] <= m:
-                    ans += (m+1-candys[i-m-1])
-                ans += m*(m+1)//2
+                # 注意此时i-1才是递减序列的末尾，递减序列的范围[last, i-1]
+                # 特别的，i=ls不影响后续的逻辑
+                candys[last] = max(candys[last], i-last)
+                candys[i-1] = 1
+                for j in range(i-2, last, -1):
+                    candys[j] = candys[j+1] + 1
+        for c in candys:
+            ans += c
         return ans
