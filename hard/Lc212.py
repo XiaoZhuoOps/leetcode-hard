@@ -40,9 +40,11 @@ class Solution:
             node = node.chs[ch]
             if node.word != "":
                 ans.append(node.word)
+            # path用“#”替代
             board[i][j] = "#"
             for dir in dirs:
                 dfs(i + dir[0], j + dir[1], board, node)
+            # path用“#”还原
             board[i][j] = ch
 
         for i in range(m):
