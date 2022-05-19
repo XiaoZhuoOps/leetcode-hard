@@ -43,7 +43,6 @@ class CountIntervals:
             right = max(right, self.rs[end])
             self.c -= (self.rs[end]-self.ls[end]+1)
             end += 1
-        # 若 sta让他
         self.ls[start:end] = [left]
         self.rs[start:end] = [right]
         self.c += (right-left+1)
