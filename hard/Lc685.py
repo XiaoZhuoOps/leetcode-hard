@@ -3,8 +3,8 @@ class Solution:
     2022年4月11日
     1 并查集
     2 O(n^2)
-    3
-    4
+    3 
+    4 
     """
     def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
         n = len(edges)
