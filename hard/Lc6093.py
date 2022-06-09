@@ -3,9 +3,6 @@
 # O(N)
 # 
 # 
-from _typeshed import Self
-
-
 class Node:
     def __init__(self, ch, pre, succ):
         self.ch = ch
@@ -56,6 +53,49 @@ class TextEditor:
             ans = cur.ch + ans
             cur = cur.pre
         return ans
+
+# 调用 addText ，deleteText ，cursorLeft 和 cursorRight 的 总 次数不超过 2 * 104 次。
+# 对顶栈
+# O(N)
+# 
+# 
+class TextEditor:
+    def __init__(self):
+        self.ls = []
+        self.rs = []
+
+    def append(self, arr : List[int], num) -> None:
+        arr.append(num)
+
+    def pop(self, arr : List[int]) -> int:
+        return arr.pop(-1)
+
+    def addText(self, text: str) -> None:
+        for s in text:
+            self.append(self.ls, s)
+
+    def deleteText(self, k: int) -> int:
+        for i in range(k):
+            if len(self.ls) == 0:
+                return i
+            self.pop(self.ls)
+        return k
+
+    def cursorLeft(self, k: int) -> str:
+        for i in range(k):
+            if len(self.ls) == 0:
+                break
+            self.append(self.rs, self.pop(self.ls))
+        size = len(self.ls)
+        return "".join(self.ls[size-min(10, size):size])
+
+    def cursorRight(self, k: int) -> str:
+        for i in range(k):
+            if len(self.rs) == 0:
+                break
+            self.append(self.ls, self.pop(self.rs))
+        size = len(self.ls)
+        return "".join(self.ls[size-min(10, size):size])
 
 # Your TextEditor object will be instantiated and called as such:
 # obj = TextEditor()
