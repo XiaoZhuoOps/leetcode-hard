@@ -3,19 +3,18 @@ class Solution:
     2022年4月11日
     1 并查集
     2 O(n^2)
-    3 
-    4 
+    3
+    4
     """
     def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
         n = len(edges)
-        par = [0 for _ in range(n + 1)]
+        par = [0 for _ in range(n + 1)] 
         conflict = -1
         circle = -1
         for i in range(1, n + 1):
             par[i] = i
 
         def getRoot(a):
-            nonlocal par
             while par[a] != a:
                 a = par[a]
             return a

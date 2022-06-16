@@ -6,13 +6,19 @@ class Solution:
             chs[ps[i]].append(i)
 
         ans = 1
+        def g(a, b, l):
+            if a < l:
+                b, a = a, l
+            elif b < l:
+                b = l
+            return a, b
+
         def f(i):
-            if i == -1:
-                return 0, 0
-            # lch, rch = chs[i][0], chs[i][1]
-            # lres, rres = f(lch), f(rch)
-            # lmax = max(lres[0], lres[1])+1 if lch != -1 and s[i] != s[lch] else 1
-            # rmax = max(rres[0], rres[1])+1 if rch != -1 and s[i] != s[rch] else 1
-            # ans = max(ans, lmax+rmax-1)
-            return lmax, rmax
-        return f(0)
+            nonlocal ans
+            for ch in chs[i]:
+                l = f(chs[i])
+                a, b = g(a, b, 1 if s[ch] == sh[i] else l+1)
+                ans = max(ans, a+b-1)
+            return a
+        f(0)
+        return ans
