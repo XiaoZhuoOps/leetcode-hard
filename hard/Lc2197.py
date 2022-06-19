@@ -20,24 +20,30 @@ class Solution:
             return x*y//GCD(x, y)
 
         stack = collections.deque()
-        stack.append(nums[0])
 
-        size = len(nums)
-        if size == 1: return nums
-        i, cur = 1, nums[1]
+        if len(nums) == 1: return nums
 
-        while i < size:
-            if len(stack) > 0 and GCD(stack[-1], cur) > 1:
+        for cur in nums:
+            while len(stack) > 0 and GCD(stack[-1], cur) > 1:
                 cur = LCM(stack.pop(), cur)
-            else:
-                stack.append(cur)
-                i += 1
-                if (i < size): cur = nums[i]
+            stack.append(cur)
 
         return [i for i in stack]
         
 
 
+class Solution:
+    def replaceNonCoprimes(self, nums: List[int]) -> List[int]:
+        s = []
+        for num in nums:
+            s.append(num)
+            while len(s) > 1:
+                x, y = s[-1], s[-2]
+                g = gcd(x, y)
+                if g == 1: break
+                s.pop()
+                s[-1] *= x // g
+        return s
 
 
 
