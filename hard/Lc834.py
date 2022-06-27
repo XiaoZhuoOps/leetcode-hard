@@ -1,12 +1,16 @@
 """
 2022年4月1日
+https://leetcode.cn/problems/sum-of-distances-in-tree/
 1 树形dp/递归
 2 down[p] = sum(down[s]+ch[s]) up[s] = up[p]+n-ch[p]+1+down[p]-down[s]-ch[u]+ch[p]-ch[s]-1 = up[p]+n+down[p]-down[s]-ch[s]-ch[s]
 3 60min
 """
+
+
 class Solution:
     def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
-        up, down, ch, ans = [0 for _ in range(n)], [0 for _ in range(n)], [0 for _ in range(n)], [0 for _ in range(n)]
+        up, down, ch, ans = [0 for _ in range(n)], [0 for _ in range(n)], [
+            0 for _ in range(n)], [0 for _ in range(n)]
 
         # build graph
         graph = [[] for _ in range(n)]
