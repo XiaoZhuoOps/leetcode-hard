@@ -66,3 +66,49 @@ print(Solution2.f_max(5, [1, 0, 0, 1, 1]))
 
 # 3、给定一棵树，删除某个结点（结点值唯一）及其下面的子结点
 # （额，这题是我高度概括的，做的操作就类似于给你一棵叉树，你用剪刀把某个枝给剪掉去）,并把剩余结点按从小到大输出。
+"""
+1 dfs
+2 -
+3 
+4 
+"""
+
+
+def f3(root, target):
+    ans = []
+
+    def dfs(root, target):
+        if root == None or root.val == target:
+            return
+        ans.append(root.val)
+    return sorted(ans)
+
+
+class Solution:
+    def maximumSum(self, nums: List[int]) -> int:
+        arr = []
+        ls = len(nums)
+
+        def f(num):
+            res = 0
+            while num > 0:
+                res += (num % 10)
+                num //= 10
+            return res
+
+        for i in range(ls):
+            arr.append((f(nums[i]), nums[i]))
+
+        def s(x, y):
+            if x[0] == y[0]:
+                return x[1]-y[1]
+            else:
+                return x[0]-y[0]
+
+        arr.sort(cmp=s)
+
+        ans = -1
+        for i in range(1, ls):
+            if arr[i][0] == arr[i-1][0]:
+                ans = max(ans, arr[i][1]+arr[i-1][1])
+        return ans
