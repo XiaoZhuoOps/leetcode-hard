@@ -21,8 +21,6 @@ class MyCalendarThree:
             k += v
             ans = max(ans, k)
         return ans
-
-
 # Your MyCalendarThree object will be instantiated and called as such:
 # obj = MyCalendarThree()
 # param_1 = obj.book(startTime,endTime)
