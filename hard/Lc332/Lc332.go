@@ -2,7 +2,7 @@ package Lc332
 
 import (
 	"container/heap"
-	. "github.com/xiaozhuoops/leetcode/leetcode/template/heap"
+	. "github.com/xiaozhuoops/leetcode/template/heap"
 )
 
 func findItinerary(tickets [][]string) []string {

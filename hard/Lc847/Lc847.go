@@ -1,6 +1,6 @@
 package Lc847
 
-import . "github.com/xiaozhuoops/leetcode/leetcode/template/deque"
+import . "github.com/xiaozhuoops/leetcode/template/deque"
 
 // 1.bfs+状态压缩
 // 2.dummy node queue mask set
