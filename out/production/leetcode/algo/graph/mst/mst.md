@@ -1,1 +1,0 @@
-MST:minimum-cost spanning tree 最小生成树

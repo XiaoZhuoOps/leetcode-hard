@@ -1,3 +1,7 @@
+package hard
+
+import "fmt"
+
 // 模拟 - 链表
 // []abcd
 // add

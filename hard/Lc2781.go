@@ -1,3 +1,5 @@
+package hard
+
 // cbaaaaabc
 // ["aaaa","cb"]
 // i    j x. [j-i]
