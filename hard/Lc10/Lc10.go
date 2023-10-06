@@ -1,4 +1,4 @@
-package hard
+package Lc10
 
 // "ab" "a*."
 // 1.dp
